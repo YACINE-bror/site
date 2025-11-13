@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - FlagFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +212 661 993 407 / +212 615 544 772 / +212 609 856 457</span>
+                        <span><i class="fas fa-envelope"></i> flag-flow@flagflow.ma</span>
+                    </div>
+                    <!-- Social Media Links -->
+                    <div class="social-links">
+                        <a href="#" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/flagflow1?igsh=MWx3NXV3NDV6cGszbQ==" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/flag-flow-9475a3375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span class="flag">Flag</span><span class="flow">Flow</span></h1>
+                        </a>
+                    </div>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="search-bar">
+                        <form action="#" method="get">
+                            <input type="text" placeholder="Rechercher des produits..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header-actions">
+                        <a href="#" class="icon-link"><i class="fas fa-user"></i> <span class="icon-text">Connexion</span></a>
+                        <a href="#" class="icon-link"><i class="fas fa-shopping-cart"></i> <span class="icon-text">Panier</span> <span class="cart-count">0</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav" id="main-nav">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services.html#creation-sites">Création de Sites Web</a></li>
+                            <li><a href="services.html#automatisation-ia">Automatisation avec IA</a></li>
+                            <li><a href="services.html#applications">Création d'Applications</a></li>
+                            <li><a href="services.html#agents-ia">Agents IA Multiplateformes</a></li>
+                            <li><a href="services.html#maintenance">Maintenance Réseau & Système</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="produits.html">Produits <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="produits.html#serrures">Serrures Intelligentes</a></li>
+                            <li><a href="produits.html#cameras">Caméras de Surveillance</a></li>
+                            <li><a href="produits.html#routeurs">Routeurs & Switches</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">À Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active" data-bg="gradient-1">
+                <div class="hero-slide-bg"></div>
+                <div class="hero-content-wrapper">
+                    <div class="container">
+                        <div class="hero-content">
+                            <div class="hero-text">
+                                <h2 class="hero-title">L'Innovation Technologique à Votre Portée</h2>
+                                <p class="hero-description">Transformez vos idées en réalité. Nous proposons des solutions personnalisées pour automatiser vos processus et sécuriser votre entreprise.</p>
+                                <div class="hero-buttons">
+                                    <a href="services.html" class="btn btn-primary btn-large">Découvrir nos services</a>
+                                    <a href="produits.html" class="btn btn-outline btn-large">Voir nos produits</a>
+                                </div>
+                            </div>
+                            <div class="hero-image">
+                                <img src="les produit/les serrures/z24.png" alt="Smart Lock" onerror="this.src='https://via.placeholder.com/400x400?text=Smart+Lock'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide" data-bg="gradient-2">
+                <div class="hero-slide-bg"></div>
+                <div class="hero-content-wrapper">
+                    <div class="container">
+                        <div class="hero-content">
+                            <div class="hero-text">
+                                <h2 class="hero-title">Solutions de Sécurité Intelligentes</h2>
+                                <p class="hero-description">Protégez votre entreprise et votre domicile avec nos serrures intelligentes et systèmes de surveillance dernière génération.</p>
+                                <div class="hero-buttons">
+                                    <a href="produits.html#serrures" class="btn btn-primary btn-large">Découvrir les serrures</a>
+                                    <a href="produits.html#cameras" class="btn btn-outline btn-large">Voir les caméras</a>
+                                </div>
+                            </div>
+                            <div class="hero-image">
+                                <img src="les produit/les camera/tapo.png" alt="Security Camera" onerror="this.src='https://via.placeholder.com/400x400?text=Camera'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide" data-bg="gradient-3">
+                <div class="hero-slide-bg"></div>
+                <div class="hero-content-wrapper">
+                    <div class="container">
+                        <div class="hero-content">
+                            <div class="hero-text">
+                                <h2 class="hero-title">Réseaux Haute Performance</h2>
+                                <p class="hero-description">Routeurs WiFi 6 et 7, switches et équipements réseau professionnels pour une connectivité optimale.</p>
+                                <div class="hero-buttons">
+                                    <a href="produits.html#routeurs" class="btn btn-primary btn-large">Voir les routeurs</a>
+                                    <a href="contact.html" class="btn btn-outline btn-large">Nous contacter</a>
+                                </div>
+                            </div>
+                            <div class="hero-image">
+                                <img src="les produit/les routeurs/ax1800.png" alt="Router" onerror="this.src='https://via.placeholder.com/400x400?text=Router'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-controls">
+            <button class="hero-prev" onclick="changeHeroSlide(-1)" aria-label="Slide précédent">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="hero-next" onclick="changeHeroSlide(1)" aria-label="Slide suivant">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        <div class="hero-dots">
+            <span class="hero-dot active" onclick="setHeroSlide(0)" aria-label="Slide 1"></span>
+            <span class="hero-dot" onclick="setHeroSlide(1)" aria-label="Slide 2"></span>
+            <span class="hero-dot" onclick="setHeroSlide(2)" aria-label="Slide 3"></span>
+        </div>
+    </section>
+
+    <!-- Trust Badges Section -->
+    <section class="trust-badges">
+        <div class="container">
+            <div class="badges-grid">
+                <div class="badge-item">
+                    <div class="badge-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <div class="badge-content">
+                        <h4>Livraison Rapide</h4>
+                        <p>Livraison partout au Maroc</p>
+                    </div>
+                </div>
+                <div class="badge-item">
+                    <div class="badge-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="badge-content">
+                        <h4>Support 24/7</h4>
+                        <p>Assistance technique disponible</p>
+                    </div>
+                </div>
+                <div class="badge-item">
+                    <div class="badge-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="badge-content">
+                        <h4>Garantie Produit</h4>
+                        <p>Garantie jusqu'à 2 ans</p>
+                    </div>
+                </div>
+                <div class="badge-item">
+                    <div class="badge-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <div class="badge-content">
+                        <h4>Paiement Sécurisé</h4>
+                        <p>Plusieurs modes de paiement</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotions Section -->
+    <section class="promotions">
+        <div class="container">
+            <h2 class="section-title">Promotions en cours</h2>
+            <div class="promo-carousel-container">
+                <div class="promo-carousel" id="promoCarousel">
+                    <div class="promo-slide active">
+                        <div class="promo-slide-content">
+                            <div class="promo-image">
+                                <img src="les produit/les camera/tapo.png" alt="Caméra Tapo">
+                                <div class="promo-badge">-20%</div>
+                            </div>
+                            <div class="promo-info">
+                                <h3>Caméra Tapo</h3>
+                                <p>Caméra de sécurité 2K extérieure panoramique</p>
+                                <p class="promo-price">749 MAD</p>
+                                <a href="produit.html?id=tapo" class="btn btn-primary">Voir offre</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promo-slide">
+                        <div class="promo-slide-content">
+                            <div class="promo-image">
+                                <img src="les produit/les serrures/edgemax.png" alt="Edgemax M1 Pro">
+                                <div class="promo-badge">-15%</div>
+                            </div>
+                            <div class="promo-info">
+                                <h3>Edgemax M1 Pro Face ID</h3>
+                                <p>Reconnaissance faciale avancée, écran tactile</p>
+                                <p class="promo-price">2,200 MAD</p>
+                                <a href="produit.html?id=edgemax" class="btn btn-primary">Voir offre</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promo-slide">
+                        <div class="promo-slide-content">
+                            <div class="promo-image">
+                                <img src="les produit/les serrures/z24.png" alt="Serrure Z24">
+                                <div class="promo-badge">Nouveau</div>
+                            </div>
+                            <div class="promo-info">
+                                <h3>Serrure Intelligente Z24</h3>
+                                <p>Reconnaissance faciale 3D, empreinte digitale</p>
+                                <p class="promo-price">3,200 MAD</p>
+                                <a href="produit.html?id=z24" class="btn btn-primary">Voir offre</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promo-slide">
+                        <div class="promo-slide-content">
+                            <div class="promo-image">
+                                <img src="les produit/les camera/tiandy.png" alt="Caméra Tiandy">
+                                <div class="promo-badge">-10%</div>
+                            </div>
+                            <div class="promo-info">
+                                <h3>Caméra IP Tiandy TC-C32HN</h3>
+                                <p>2MP Fixed IR Turret Camera</p>
+                                <p class="promo-price">349 MAD</p>
+                                <a href="produit.html?id=tiandy" class="btn btn-primary">Voir offre</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="promo-carousel-controls">
+                    <button class="promo-prev" onclick="changePromoSlide(-1)">❮</button>
+                    <button class="promo-next" onclick="changePromoSlide(1)">❯</button>
+                </div>
+                <div class="promo-dots">
+                    <span class="promo-dot active" onclick="setPromoSlide(0)"></span>
+                    <span class="promo-dot" onclick="setPromoSlide(1)"></span>
+                    <span class="promo-dot" onclick="setPromoSlide(2)"></span>
+                    <span class="promo-dot" onclick="setPromoSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title">Nos Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Création de Sites Web</h3>
+                    <p>Développement de sites web modernes et responsives avec automatisation IA</p>
+                    <a href="services.html#creation-sites" class="btn btn-outline">En savoir plus</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Automatisation avec IA</h3>
+                    <p>Solutions d'automatisation intelligentes pour optimiser vos processus</p>
+                    <a href="services.html#automatisation-ia" class="btn btn-outline">En savoir plus</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Applications Mobile</h3>
+                    <p>Développement d'applications iOS et Android sur mesure</p>
+                    <a href="services.html#applications" class="btn btn-outline">En savoir plus</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Agents IA Personnalisés</h3>
+                    <p>Agents IA multiplateformes adaptés à vos besoins spécifiques</p>
+                    <a href="services.html#agents-ia" class="btn btn-outline">En savoir plus</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Maintenance Réseau</h3>
+                    <p>Installation et maintenance de réseaux et systèmes informatiques</p>
+                    <a href="services.html#maintenance" class="btn btn-outline">En savoir plus</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Équipements de Sécurité</h3>
+                    <p>Serrures intelligentes, caméras et systèmes de surveillance</p>
+                    <a href="produits.html" class="btn btn-outline">Voir les produits</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Produits Phares</h2>
+                <a href="produits.html" class="view-all-link">Voir tout <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="les produit/les camera/tapo.png" alt="Caméra Tapo" onerror="this.src='https://via.placeholder.com/300x300?text=Caméra+Tapo'">
+                        <div class="product-badge">Nouveau</div>
+                        <div class="product-actions-overlay">
+                            <button class="product-quick-view" onclick="window.location.href='produit.html?id=tapo'">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="product-wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra Tapo</h3>
+                        <p class="product-category">Surveillance</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">749 MAD</p>
+                        <a href="produit.html?id=tapo" class="btn btn-primary">Voir détails</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="les produit/les serrures/z24.png" alt="Serrure Z24" onerror="this.src='https://via.placeholder.com/300x300?text=Serrure+Z24'">
+                        <div class="product-badge">Nouveau</div>
+                        <div class="product-actions-overlay">
+                            <button class="product-quick-view" onclick="window.location.href='produit.html?id=z24'">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="product-wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Serrure Intelligente Z24</h3>
+                        <p class="product-category">Sécurité</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <p class="product-price">3,200 MAD</p>
+                        <a href="produit.html?id=z24" class="btn btn-primary">Voir détails</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="les produit/les camera/hikvision.png" alt="Caméra Hikvision" onerror="this.src='https://via.placeholder.com/300x300?text=Caméra+Hikvision'">
+                        <div class="product-badge" style="background: #dc3545;">Rupture</div>
+                        <div class="product-actions-overlay">
+                            <button class="product-quick-view" onclick="window.location.href='produit.html?id=hikvision'">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="product-wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra Hikvision DS-2CE16K0T-LFS</h3>
+                        <p class="product-category">Surveillance</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                        <p class="product-price">324 MAD</p>
+                        <p style="color: #dc3545; font-size: 12px; font-weight: bold; margin-bottom: 10px;">⚠️ Rupture de stock</p>
+                        <a href="produit.html?id=hikvision" class="btn btn-primary">Voir détails</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="les produit/les routeurs/ax1800.png" alt="Routeur WiFi 6 AX1800" onerror="this.src='https://via.placeholder.com/300x300?text=Routeur+WiFi+6+AX1800'">
+                        <div class="product-actions-overlay">
+                            <button class="product-quick-view" onclick="window.location.href='produit.html?id=ax1800'">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="product-wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Routeur WiFi 6 AX1800 bi-bande</h3>
+                        <p class="product-category">Réseau</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">Sur demande</p>
+                        <a href="produit.html?id=ax1800" class="btn btn-primary">Voir détails</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="les produit/les camera/tiandy.png" alt="Caméra Tiandy" onerror="this.src='https://via.placeholder.com/300x300?text=Caméra+Tiandy'">
+                        <div class="product-actions-overlay">
+                            <button class="product-quick-view" onclick="window.location.href='produit.html?id=tiandy'">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="product-wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Caméra IP Tiandy TC-C32HN</h3>
+                        <p class="product-category">Surveillance</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                        <p class="product-price">349 MAD</p>
+                        <a href="produit.html?id=tiandy" class="btn btn-primary">Voir détails</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="les produit/les serrures/edgemax.png" alt="Edgemax M1 Pro" onerror="this.src='https://via.placeholder.com/300x300?text=Edgemax+M1+Pro'">
+                        <div class="product-badge" style="background: #ff6b35;">Promo</div>
+                        <div class="product-actions-overlay">
+                            <button class="product-quick-view" onclick="window.location.href='produit.html?id=edgemax'">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="product-wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Edgemax M1 Pro Face ID</h3>
+                        <p class="product-category">Sécurité</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">2,200 MAD</p>
+                        <a href="produit.html?id=edgemax" class="btn btn-primary">Voir détails</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Restez informé de nos dernières offres</h2>
+                    <p>Inscrivez-vous à notre newsletter et recevez des promotions exclusives et des nouveautés</p>
+                </div>
+                <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                    <input type="email" placeholder="Votre adresse email" required>
+                    <button type="submit" class="btn btn-primary">S'abonner</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>À Propos</h3>
+                    <p>Votre partenaire de confiance pour toutes vos solutions technologiques. De la création de sites web à l'automatisation IA, en passant par les équipements de sécurité.</p>
+                    <!-- Social Media Links -->
+                    <div class="social-links">
+                        <a href="#" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/flagflow1?igsh=MWx3NXV3NDV6cGszbQ==" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/flag-flow-9475a3375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#creation-sites">Création de Sites Web</a></li>
+                        <li><a href="services.html#automatisation-ia">Automatisation IA</a></li>
+                        <li><a href="services.html#applications">Applications Mobile</a></li>
+                        <li><a href="services.html#agents-ia">Agents IA Personnalisés</a></li>
+                        <li><a href="services.html#maintenance">Maintenance Réseau</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Produits</h3>
+                    <ul>
+                        <li><a href="produits.html#serrures">Serrures Intelligentes</a></li>
+                        <li><a href="produits.html#cameras">Caméras de Surveillance</a></li>
+                        <li><a href="produits.html#routeurs">Routeurs & Switches</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Temara, Maroc</li>
+                        <li><i class="fas fa-phone"></i> +212 661 993 407</li>
+                        <li><i class="fas fa-phone"></i> +212 615 544 772</li>
+                        <li><i class="fas fa-phone"></i> +212 609 856 457</li>
+                        <li><i class="fas fa-envelope"></i> flag-flow@flagflow.ma</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FlagFlow. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/212615544772?text=Bonjour,%20je%20souhaite%20plus%20d'informations%20sur%20vos%20services." target="_blank" class="whatsapp-float" title="Contactez-nous sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Produits - FlagFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .filters {
+            background: var(--light-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .filter-group {
+            margin-bottom: 15px;
+        }
+        .filter-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+        .filter-group select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid var(--border-color);
+            border-radius: 4px;
+        }
+        .products-section {
+            padding: 40px 0;
+        }
+        .category-title {
+            font-size: 28px;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--primary-color);
+            color: var(--dark-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +212 661 993 407 / +212 615 544 772 / +212 609 856 457</span>
+                        <span><i class="fas fa-envelope"></i> flag-flow@flagflow.ma</span>
+                    </div>
+                    <!-- Social Media Links -->
+                    <div class="social-links">
+                        <a href="#" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/flagflow1?igsh=MWx3NXV3NDV6cGszbQ==" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/flag-flow-9475a3375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span class="flag">Flag</span><span class="flow">Flow</span></h1>
+                        </a>
+                    </div>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="search-bar">
+                        <form action="#" method="get">
+                            <input type="text" placeholder="Rechercher des produits..." name="search" id="search-input">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header-actions">
+                        <a href="#" class="icon-link"><i class="fas fa-user"></i> <span class="icon-text">Connexion</span></a>
+                        <a href="#" class="icon-link"><i class="fas fa-shopping-cart"></i> <span class="icon-text">Panier</span> <span class="cart-count">0</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav" id="main-nav">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services.html#creation-sites">Création de Sites Web</a></li>
+                            <li><a href="services.html#automatisation-ia">Automatisation avec IA</a></li>
+                            <li><a href="services.html#applications">Création d'Applications</a></li>
+                            <li><a href="services.html#agents-ia">Agents IA Multiplateformes</a></li>
+                            <li><a href="services.html#maintenance">Maintenance Réseau & Système</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="produits.html" class="active">Produits <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#serrures">Serrures Intelligentes</a></li>
+                            <li><a href="#cameras">Caméras de Surveillance</a></li>
+                            <li><a href="#routeurs">Routeurs & Switches</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">À Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--hover-color) 100%); color: white; padding: 60px 0; text-align: center;">
+        <div class="container">
+            <h1>Nos Produits</h1>
+            <p>Équipements de sécurité et de réseau de qualité professionnelle</p>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters-section" style="padding: 30px 0; background: var(--light-color);">
+        <div class="container">
+            <div class="filters">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    <div class="filter-group">
+                        <label for="category-filter">Catégorie</label>
+                        <select id="category-filter" onchange="filterProducts()">
+                            <option value="all">Toutes les catégories</option>
+                            <option value="serrures">Serrures Intelligentes</option>
+                            <option value="cameras">Caméras de Surveillance</option>
+                            <option value="routeurs">Routeurs & Switches</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="brand-filter">Marque</label>
+                        <select id="brand-filter" onchange="filterProducts()">
+                            <option value="all">Toutes les marques</option>
+                            <option value="z24">Z24</option>
+                            <option value="i30">i30</option>
+                            <option value="i40">i40</option>
+                            <option value="h20">H20</option>
+                            <option value="x25">X25</option>
+                            <option value="x10">X10</option>
+                            <option value="h24">H24</option>
+                            <option value="tapo">Tapo</option>
+                            <option value="hikvision">Hikvision</option>
+                            <option value="ezviz">EZVIZ</option>
+                            <option value="tplink">TP-Link</option>
+                            <option value="tiandy">Tiandy</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="price-filter">Prix</label>
+                        <select id="price-filter" onchange="filterProducts()">
+                            <option value="all">Tous les prix</option>
+                            <option value="0-500">Moins de 500 MAD</option>
+                            <option value="500-1000">500 - 1000 MAD</option>
+                            <option value="1000-2500">1000 - 2500 MAD</option>
+                            <option value="2500-3500">2500 - 3500 MAD</option>
+                            <option value="3500+">Plus de 3500 MAD</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            
+            <!-- Serrures Intelligentes -->
+            <div id="serrures" class="category-section" data-category="serrures" style="margin-bottom: 60px; padding-top: 40px;">
+                <h2 class="category-title">Serrures Intelligentes</h2>
+                <div class="products-grid">
+                    
+                    <div class="product-card" data-brand="z24" data-price="3200">
+                        <div class="product-image">
+                            <img src="les produit/les serrures/z24.png" alt="Z24" onerror="this.src='https://via.placeholder.com/300x300?text=Z24'">
+                            <div class="product-badge">Nouveau</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Serrure Intelligente Z24</h3>
+                            <p class="product-category">Tuya</p>
+                            <p class="product-price">3,200 MAD</p>
+                            <p class="product-description" style="font-size: 14px; color: var(--gray); margin-bottom: 10px;">Reconnaissance faciale 3D, empreinte digitale, code PIN</p>
+                            <a href="produit.html?id=z24" class="btn btn-primary">Voir détails</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-brand="i30" data-price="3149">
+                        <div class="product-image">
+                            <img src="les produit/les serrures/i30.png" alt="i30" onerror="this.src='https://via.placeholder.com/300x300?text=i30'">
+                        </div>
+                        <div class="product-info">
+                            <h3>Serrure Intelligente i30</h3>
+                            <p class="product-category">Tuya</p>
+                            <p class="product-price">3,149 MAD</p>
+                            <p class="product-description" style="font-size: 14px; color: var(--gray); margin-bottom: 10px;">Contrôle d'accès intelligent avec Bluetooth</p>
+                            <a href="produit.html?id=i30" class="btn btn-primary">Voir détails</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-brand="i40" data-price="3300">
+                        <div class="product-image">
+                            <img src="les produit/les serrures/i40.png" alt="i40" onerror="this.src='https://via.placeholder.com/300x300?text=i40'">
+                        </div>
+                        <div class="product-info">
+                            <h3>Serrure Intelligente i40</h3>
+                            <p class="product-category">Tuya</p>
+                            <p class="product-price">3,300 MAD</p>
+                            <p class="product-description" style="font-size: 14px; color: var(--gray); margin-bottom: 10px;">Solution haut de gamme avec fonctionnalités avancées</p>
+                            <a href="produit.html?id=i40" class="btn btn-primary">Voir détails</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-brand="edgemax" data-price="2200">
+                        <div class="product-image">
+                            <img src="les produit/les serrures/edgemax.png" alt="Edgemax M1 Pro" onerror="this.src='https://via.placeholder.com/300x300?text=Edgemax+M1+Pro'">
+                            <div class="product-badge">Promo</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Edgemax M1 Pro Face ID</h3>
+                            <p class="product-category">Tuya</p>
+                            <p class="product-price">2,200 MAD</p>
+                            <p class="product-description" style="font-size: 14px; color: var(--gray); margin-bottom: 10px;">Reconnaissance faciale avancée, écran tactile</p>
+                            <a href="produit.html?id=edgemax" class="btn btn-primary">Voir détails</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-brand="m1pro" data-price="2200">
+                        <div class="product-image">
+                            <img src="les produit/les serrures/m1pro.png" alt="M1 Pro Visio" onerror="this.src='https://via.placeholder.com/300x300?text=M1+Pro+Visio'">
+                        </div>
+                        <div class="product-info">
+                            <h3>M1 Pro Visio</h3>
+                            <p class="product-category">Tuya</p>
+                            <p class="product-price">2,200 MAD</p>
+                            <p class="product-description" style="font-size: 14px; color: var(--gray); margin-bottom: 10px;">Serrure avec vidéophone intégré</p>
+                            <a href="produit.html?id=m1pro" class="btn btn-primary">Voir détails</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-brand="x5" data-price="2200">
+                        <div class="product-image">
+                            <img src="les produit/les serrures/x5.png" alt="X5" onerror="this.src='https://via.placeholder.com/300x300?text=X5'">
+                        </div>
+                        <div class="product-info">
+                            <h3>Serrure Intelligente X5</h3>
+                            <p class="product-category">Tuya</p>
+                            <p class="product-price">2,200 MAD</p>
+                            <p class="product-description" style="font-size: 14px; color: var(--gray); margin-bottom: 10px;">Design moderne, performance optimale</p>
+                            <a href="produit.html?id=x5" class="btn btn-primary">Voir détails</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-brand="h20" data-price="0">
+                        <div class="product-image">
+                            <img src="les produit/les serrures/h20.png" alt="H20" onerror="this.src='https://via.placeholder.com/300x300?text=H20'">
+                        </div>
+                        <div class="product-info">
+                            <h3>Serrure Intelligente H20</h3>
+                            <p class="product-category">Tuya</p>
+                            <p class="product-price">Sur demande</p>
+                            <p class="product-description" style="font-size: 14px; color: var(--gray); margin-bottom: 10px;">Solution professionnelle avancée</p>
+                            <a href="produit.html?id=h20" class="btn btn-primary">Voir détails</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-brand="x25" data-price="3149">
+                        <div class="product-image">
+                            <img src="les produit/les serrures/x25.png" alt="X25 Face ID" onerror="this.src='https://via.placeholder.com/300x300?text=X25+Face+ID'">
+                        </div>
+                        <div class="product-info">
+                            <h3>Serrure Électronique X25 Face ID</h3>
+                            <p class="product-category">Tuya</p>
+                            <p class="product-price">3,149 MAD</p>
+                            <p class="product-description" style="font-size: 14px; color: var(--gray); margin-bottom: 10px;">Serrure électronique avec reconnaissance faciale</p>
+                            <a href="produit.html?id=x25" class="btn btn-primary">Voir détails</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-brand="x10" data-price="3149">
+                        <div class="product-image">
+                            <img src="les produit/les serrures/x10.png" alt="X10 Face ID Luxury" onerror="this.src='https://via.placeholder.com/300x300?text=X10+Face+ID+Luxury'">
+                        </div>
+                        <div class="product-info">
+                            <h3>Serrure Électronique X10 Face ID Luxury</h3>
+                            <p class="product-category">Tuya</p>
+                            <p class="product-price">3,149 MAD</p>
+                            <p class="product-description" style="font-size: 14px; color: var(--gray); margin-bottom: 10px;">Serrure électronique haut de gamme avec Face ID</p>
+                            <a href="produit.html?id=x10" class="btn btn-primary">Voir détails</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-brand="h24" data-price="3149">
+                        <div class="product-image">
+                            <img src="les produit/les serrures/h24.png" alt="H24 Face ID" onerror="this.src='https://via.placeholder.com/300x300?text=H24+Face+ID'">
+                        </div>
+                        <div class="product-info">
+                            <h3>Serrure Électronique H24 Face ID</h3>
+                            <p class="product-category">Tuya</p>
+                            <p class="product-price">3,149 MAD</p>
+                            <p class="product-description" style="font-size: 14px; color: var(--gray); margin-bottom: 10px;">Serrure électronique avec reconnaissance faciale avancée</p>
+                            <a href="produit.html?id=h24" class="btn btn-primary">Voir détails</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Caméras de Surveillance -->
+            <div id="cameras" class="category-section" data-category="cameras" style="margin-bottom: 60px; padding-top: 40px;">
+                <h2 class="category-title">Caméras de Surveillance</h2>
+                <div class="products-grid">
+                    
+                    <div class="product-card" data-brand="tapo" data-price="749">
+                        <div class="product-image">
+                            <img src="les produit/les camera/tapo.png" alt="Caméra Tapo" onerror="this.src='https://via.placeholder.com/300x300?text=Caméra+Tapo'">
+                            <div class="product-badge">Nouveau</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Caméra Tapo</h3>
+                            <p class="product-category">Tapo</p>
+                            <p class="product-price">749 MAD</p>
+                            <p class="product-description" style="font-size: 14px; color: var(--gray); margin-bottom: 10px;">Caméra de sécurité 2K extérieure panoramique</p>
+                            <a href="produit.html?id=tapo" class="btn btn-primary">Voir détails</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-brand="hikvision" data-price="324">
+                        <div class="product-image">
+                            <img src="les produit/les camera/hikvision.png" alt="Caméra Hikvision" onerror="this.src='https://via.placeholder.com/300x300?text=Caméra+Hikvision'">
+                            <div class="product-badge" style="background: #dc3545;">Rupture</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Caméra Hikvision DS-2CE16K0T-LFS</h3>
+                            <p class="product-category">Hikvision</p>
+                            <p class="product-price">324 MAD</p>
+                            <p class="product-description" style="font-size: 14px; color: var(--gray); margin-bottom: 10px;">BULLET 3K COLORVU (2.8MM)</p>
+                            <p style="color: #dc3545; font-weight: bold; margin-bottom: 10px;">⚠️ Rupture de stock</p>
+                            <a href="produit.html?id=hikvision" class="btn btn-primary">Voir détails</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-brand="tiandy" data-price="349">
+                        <div class="product-image">
+                            <img src="les produit/les camera/tiandy.png" alt="Caméra Tiandy" onerror="this.src='https://via.placeholder.com/300x300?text=Caméra+Tiandy'">
+                        </div>
+                        <div class="product-info">
+                            <h3>Caméra IP Tiandy TC-C32HN</h3>
+                            <p class="product-category">Tiandy</p>
+                            <p class="product-price">349 MAD</p>
+                            <p class="product-description" style="font-size: 14px; color: var(--gray); margin-bottom: 10px;">2MP Fixed IR Turret Camera (2.8MM)</p>
+                            <a href="produit.html?id=tiandy" class="btn btn-primary">Voir détails</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-brand="hikvision" data-price="400">
+                        <div class="product-image">
+                            <img src="les produit/les camera/dome.png" alt="Caméra Hikvision DS-2CE78U0T-LTS" onerror="this.src='https://via.placeholder.com/300x300?text=Hikvision+Dome'">
+                        </div>
+                        <div class="product-info">
+                            <h3>Caméra Dome Analogique Hybrid Light 4K/8MP HIKVISION DS-2CE78U0T-LTS</h3>
+                            <p class="product-category">Hikvision</p>
+                            <p class="product-price">400 MAD</p>
+                            <p class="product-description" style="font-size: 14px; color: var(--gray); margin-bottom: 10px;">Audio + Micro (Two-way Audio)</p>
+                            <a href="produit.html?id=dome-hikvision" class="btn btn-primary">Voir détails</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-brand="ezviz" data-price="399">
+                        <div class="product-image">
+                            <img src="les produit/les camera/CS-H6c.png" alt="Caméra EZVIZ CS-H6cm" onerror="this.src='https://via.placeholder.com/300x300?text=EZVIZ+CS-H6c'">
+                        </div>
+                        <div class="product-info">
+                            <h3>Caméra IP WiFi 2MP EZVIZ Motorisée avec Audio CS-H6cm</h3>
+                            <p class="product-category">EZVIZ</p>
+                            <p class="product-price">399 MAD</p>
+                            <p class="product-description" style="font-size: 14px; color: var(--gray); margin-bottom: 10px;">Caméra IP WiFi motorisée 2MP avec audio</p>
+                            <a href="produit.html?id=cs-h6c" class="btn btn-primary">Voir détails</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-brand="hikvision" data-price="450">
+                        <div class="product-image">
+                            <img src="les produit/les camera/image.png" alt="Caméra Hikvision DS-2CD1123G2-LIU" onerror="this.src='https://via.placeholder.com/300x300?text=Hikvision+Dome+IP'">
+                        </div>
+                        <div class="product-info">
+                            <h3>Caméra IP Dome 2MP Smart Hybrid Audio Hikvision DS-2CD1123G2-LIU</h3>
+                            <p class="product-category">Hikvision</p>
+                            <p class="product-price">450 MAD</p>
+                            <p class="product-description" style="font-size: 14px; color: var(--gray); margin-bottom: 10px;">Caméra IP dome 2MP Smart Hybrid avec audio</p>
+                            <a href="produit.html?id=hikvision-dome-ip" class="btn btn-primary">Voir détails</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Routeurs & Switches -->
+            <div id="routeurs" class="category-section" data-category="routeurs" style="margin-bottom: 60px; padding-top: 40px;">
+                <h2 class="category-title">Routeurs & Switches</h2>
+                <div class="products-grid">
+                    
+                    <div class="product-card" data-brand="tplink" data-price="0">
+                        <div class="product-image">
+                            <img src="les produit/les routeurs/ax1800.png" alt="Routeur WiFi 6 AX1800 bi-bande" onerror="this.src='https://via.placeholder.com/300x300?text=Routeur+WiFi+6+AX1800'">
+                        </div>
+                        <div class="product-info">
+                            <h3>Routeur WiFi 6 AX1800 bi-bande</h3>
+                            <p class="product-category">TP-Link</p>
+                            <p class="product-price">Sur demande</p>
+                            <p class="product-description" style="font-size: 14px; color: var(--gray); margin-bottom: 10px;">Routeur WiFi 6 haute performance bi-bande</p>
+                            <a href="produit.html?id=ax1800" class="btn btn-primary">Voir détails</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-brand="tplink" data-price="0">
+                        <div class="product-image">
+                            <img src="les produit/les routeurs/archer-be220.png" alt="WiFi 7 Archer BE220" onerror="this.src='https://via.placeholder.com/300x300?text=Archer+BE220'">
+                        </div>
+                        <div class="product-info">
+                            <h3>WiFi 7 Archer BE220 – Routeur BE3600 bi-bande</h3>
+                            <p class="product-category">TP-Link</p>
+                            <p class="product-price">Sur demande</p>
+                            <p class="product-description" style="font-size: 14px; color: var(--gray); margin-bottom: 10px;">Routeur WiFi 7 dernière génération BE3600</p>
+                            <a href="produit.html?id=archer-be220" class="btn btn-primary">Voir détails</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-brand="tplink" data-price="0">
+                        <div class="product-image">
+                            <img src="les produit/les routeurs/tl-wr844n.png" alt="TL-WR844N" onerror="this.src='https://via.placeholder.com/300x300?text=TL-WR844N'">
+                        </div>
+                        <div class="product-info">
+                            <h3>TL-WR844N Nouveauté 300 Mbps Multi-Mode Wi-Fi Router</h3>
+                            <p class="product-category">TP-Link</p>
+                            <p class="product-price">Sur demande</p>
+                            <p class="product-description" style="font-size: 14px; color: var(--gray); margin-bottom: 10px;">Routeur Multi-Mode Wi-Fi N 300 Mbps</p>
+                            <a href="produit.html?id=tl-wr844n" class="btn btn-primary">Voir détails</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-brand="tplink" data-price="0">
+                        <div class="product-image">
+                            <img src="les produit/les routeurs/tl-wr840n.png" alt="TL-WR840N" onerror="this.src='https://via.placeholder.com/300x300?text=TL-WR840N'">
+                        </div>
+                        <div class="product-info">
+                            <h3>Point d'accès Wi-Fi N 300 Mbps – TL-WR840N</h3>
+                            <p class="product-category">TP-Link</p>
+                            <p class="product-price">Sur demande</p>
+                            <p class="product-description" style="font-size: 14px; color: var(--gray); margin-bottom: 10px;">Point d'accès Wi-Fi N 300 Mbps</p>
+                            <a href="produit.html?id=tl-wr840n" class="btn btn-primary">Voir détails</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-brand="tplink" data-price="0">
+                        <div class="product-image">
+                            <img src="les produit/les routeurs/eap115.png" alt="EAP115" onerror="this.src='https://via.placeholder.com/300x300?text=EAP115'">
+                        </div>
+                        <div class="product-info">
+                            <h3>Point d'accès WiFi N 300 Mbps PoE – Plafonnier -EAP115</h3>
+                            <p class="product-category">TP-Link</p>
+                            <p class="product-price">Sur demande</p>
+                            <p class="product-description" style="font-size: 14px; color: var(--gray); margin-bottom: 10px;">Point d'accès WiFi N 300 Mbps PoE plafonnier</p>
+                            <a href="produit.html?id=eap115" class="btn btn-primary">Voir détails</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-brand="tplink" data-price="0">
+                        <div class="product-image">
+                            <img src="les produit/les routeurs/archer-c86.png" alt="Archer C86" onerror="this.src='https://via.placeholder.com/300x300?text=Archer+C86'">
+                        </div>
+                        <div class="product-info">
+                            <h3>AC1900 Wireless MU-MIMO Wi-Fi Router – Archer C86</h3>
+                            <p class="product-category">TP-Link</p>
+                            <p class="product-price">Sur demande</p>
+                            <p class="product-description" style="font-size: 14px; color: var(--gray); margin-bottom: 10px;">Routeur AC1900 Wireless MU-MIMO</p>
+                            <a href="produit.html?id=archer-c86" class="btn btn-primary">Voir détails</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>À Propos</h3>
+                    <p>Votre partenaire de confiance pour toutes vos solutions technologiques. De la création de sites web à l'automatisation IA, en passant par les équipements de sécurité.</p>
+                    <!-- Social Media Links -->
+                    <div class="social-links">
+                        <a href="#" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/flagflow1?igsh=MWx3NXV3NDV6cGszbQ==" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/flag-flow-9475a3375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#creation-sites">Création de Sites Web</a></li>
+                        <li><a href="services.html#automatisation-ia">Automatisation IA</a></li>
+                        <li><a href="services.html#applications">Applications Mobile</a></li>
+                        <li><a href="services.html#agents-ia">Agents IA Personnalisés</a></li>
+                        <li><a href="services.html#maintenance">Maintenance Réseau</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Produits</h3>
+                    <ul>
+                        <li><a href="produits.html#serrures">Serrures Intelligentes</a></li>
+                        <li><a href="produits.html#cameras">Caméras de Surveillance</a></li>
+                        <li><a href="produits.html#routeurs">Routeurs & Switches</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Temara, Maroc</li>
+                        <li><i class="fas fa-phone"></i> +212 661 993 407</li>
+                        <li><i class="fas fa-phone"></i> +212 615 544 772</li>
+                        <li><i class="fas fa-phone"></i> +212 609 856 457</li>
+                        <li><i class="fas fa-envelope"></i> flag-flow@flagflow.ma</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FlagFlow. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/212615544772?text=Bonjour,%20je%20souhaite%20plus%20d'informations%20sur%20vos%20produits." target="_blank" class="whatsapp-float" title="Contactez-nous sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>
+

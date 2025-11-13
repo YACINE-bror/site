@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Photos - FlagFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .photos-section {
+            padding: 60px 0;
+        }
+        .photo-category {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .photo-category h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-color);
+        }
+        .photo-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: var(--light-color);
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .photo-item-info {
+            flex: 1;
+        }
+        .photo-item-info h3 {
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+        .photo-item-info p {
+            color: var(--gray);
+            font-size: 14px;
+            margin: 0;
+        }
+        .photo-path {
+            background: var(--white);
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 12px;
+            color: var(--primary-color);
+            border: 1px solid var(--border-color);
+            margin-top: 5px;
+            display: inline-block;
+        }
+        .instructions {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--hover-color) 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        .instructions h2 {
+            margin-bottom: 20px;
+        }
+        .instructions ol {
+            margin-left: 20px;
+        }
+        .instructions li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .status-badge {
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+        .status-present {
+            background: var(--success-color);
+            color: white;
+        }
+        .status-missing {
+            background: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +212 661 993 407 / +212 615 544 772 / +212 609 856 457</span>
+                        <span><i class="fas fa-envelope"></i> flag-flow@flagflow.ma</span>
+                    </div>
+                    <!-- Social Media Links -->
+                    <div class="social-links">
+                        <a href="#" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/flagflow1?igsh=MWx3NXV3NDV6cGszbQ==" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/flag-flow-9475a3375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span class="flag">Flag</span><span class="flow">Flow</span></h1>
+                        </a>
+                    </div>
+                    <div class="search-bar">
+                        <form action="#" method="get">
+                            <input type="text" placeholder="Rechercher des produits..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header-actions">
+                        <a href="index.html" class="icon-link"><i class="fas fa-home"></i> Accueil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Instructions Section -->
+    <section class="photos-section">
+        <div class="container">
+            <div class="instructions">
+                <h2><i class="fas fa-info-circle"></i> Instructions pour Ajouter les Photos</h2>
+                <ol>
+                    <li>Organisez vos photos dans les dossiers suivants selon la catégorie du produit</li>
+                    <li>Nommez chaque photo avec le nom exact du produit (ex: tapo.png, z24.png, etc.)</li>
+                    <li>Utilisez des formats d'image supportés : .png, .jpg, .jpeg</li>
+                    <li>Recommandé : Taille optimale 800x800px ou plus pour une meilleure qualité</li>
+                    <li>Une fois la photo ajoutée dans le bon dossier, elle apparaîtra automatiquement sur le site</li>
+                </ol>
+            </div>
+
+            <!-- Caméras -->
+            <div class="photo-category">
+                <h2><i class="fas fa-video"></i> Caméras de Surveillance</h2>
+                <p style="color: var(--gray); margin-bottom: 20px;">Dossier : <span class="photo-path">les produit/les camera/</span></p>
+                
+                <div class="photo-item">
+                    <div class="photo-item-info">
+                        <h3>Caméra Tapo <span class="status-badge status-present">✓ Photo présente</span></h3>
+                        <p>Caméra de sécurité 2K extérieure panoramique</p>
+                        <span class="photo-path">les produit/les camera/tapo.png</span>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="photo-item-info">
+                        <h3>Caméra Hikvision DS-2CE16K0T-LFS <span class="status-badge status-present">✓ Photo présente</span></h3>
+                        <p>BULLET 3K COLORVU (2.8MM) - 324 MAD - ⚠️ Rupture de stock</p>
+                        <span class="photo-path">les produit/les camera/hikvision.png</span>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="photo-item-info">
+                        <h3>Caméra IP Tiandy TC-C32HN <span class="status-badge status-present">✓ Photo présente</span></h3>
+                        <p>2MP Fixed IR Turret Camera (2.8MM) - 349 MAD</p>
+                        <span class="photo-path">les produit/les camera/tiandy.png</span>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="photo-item-info">
+                        <h3>Caméra Dome Analogique Hybrid Light 4K/8MP HIKVISION DS-2CE78U0T-LTS <span class="status-badge status-present">✓ Photo présente</span></h3>
+                        <p>Audio + Micro (Two-way Audio) - 400 MAD</p>
+                        <span class="photo-path">les produit/les camera/dome.png</span>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="photo-item-info">
+                        <h3>Caméra IP WiFi 2MP EZVIZ Motorisée avec Audio CS-H6cm <span class="status-badge status-present">✓ Photo présente</span></h3>
+                        <p>Caméra IP WiFi motorisée 2MP avec audio - 399 MAD</p>
+                        <span class="photo-path">les produit/les camera/CS-H6c.png</span>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="photo-item-info">
+                        <h3>Caméra IP Dome 2MP Smart Hybrid Audio Hikvision DS-2CD1123G2-LIU <span class="status-badge status-present">✓ Photo présente</span></h3>
+                        <p>Caméra IP dome 2MP Smart Hybrid avec audio - 450 MAD</p>
+                        <span class="photo-path">les produit/les camera/image.png</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serrures Intelligentes -->
+            <div class="photo-category">
+                <h2><i class="fas fa-lock"></i> Serrures Intelligentes</h2>
+                <p style="color: var(--gray); margin-bottom: 20px;">Dossier : <span class="photo-path">les produit/les serrures/</span></p>
+                
+                <div class="photo-item">
+                    <div class="photo-item-info">
+                        <h3>Serrure Z24 <span class="status-badge status-present">✓ Photo présente</span></h3>
+                        <p>Serrure intelligente avec reconnaissance faciale 3D - 3,200 MAD</p>
+                        <span class="photo-path">les produit/les serrures/z24.png</span>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="photo-item-info">
+                        <h3>Serrure i30 <span class="status-badge status-present">✓ Photo présente</span></h3>
+                        <p>Serrure intelligente Bluetooth - 3,149 MAD</p>
+                        <span class="photo-path">les produit/les serrures/i30.png</span>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="photo-item-info">
+                        <h3>Serrure i40 <span class="status-badge status-missing">✗ Photo manquante</span></h3>
+                        <p>Solution haut de gamme avec fonctionnalités avancées - 3,300 MAD</p>
+                        <span class="photo-path">les produit/les serrures/i40.png</span>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="photo-item-info">
+                        <h3>Edgemax M1 Pro Face ID <span class="status-badge status-present">✓ Photo présente</span></h3>
+                        <p>Serrure avec reconnaissance faciale avancée - 2,200 MAD</p>
+                        <span class="photo-path">les produit/les serrures/edgemax.png</span>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="photo-item-info">
+                        <h3>M1 Pro Visio X5 <span class="status-badge status-present">✓ Photo présente</span></h3>
+                        <p>Serrure avec vidéophone intégré - 2,200 MAD</p>
+                        <span class="photo-path">les produit/les serrures/m1pro.png</span>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="photo-item-info">
+                        <h3>Serrure X5 <span class="status-badge status-missing">✗ Photo manquante</span></h3>
+                        <p>Serrure intelligente design moderne - 2,200 MAD</p>
+                        <span class="photo-path">les produit/les serrures/x5.png</span>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="photo-item-info">
+                        <h3>Serrure H20 <span class="status-badge status-missing">✗ Photo manquante</span></h3>
+                        <p>Solution professionnelle avancée - Sur demande</p>
+                        <span class="photo-path">les produit/les serrures/h20.png</span>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="photo-item-info">
+                        <h3>Serrure X25 Face ID <span class="status-badge status-present">✓ Photo présente</span></h3>
+                        <p>Serrure électronique avec reconnaissance faciale - 3,149 MAD</p>
+                        <span class="photo-path">les produit/les serrures/x25.png</span>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="photo-item-info">
+                        <h3>Serrure X10 Face ID Luxury <span class="status-badge status-present">✓ Photo présente</span></h3>
+                        <p>Serrure électronique haut de gamme avec Face ID - 3,149 MAD</p>
+                        <span class="photo-path">les produit/les serrures/x10.png</span>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="photo-item-info">
+                        <h3>Serrure H24 Face ID <span class="status-badge status-present">✓ Photo présente</span></h3>
+                        <p>Serrure électronique avec reconnaissance faciale avancée - 3,149 MAD</p>
+                        <span class="photo-path">les produit/les serrures/h24.png</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Routeurs & Switches -->
+            <div class="photo-category">
+                <h2><i class="fas fa-network-wired"></i> Routeurs & Switches</h2>
+                <p style="color: var(--gray); margin-bottom: 20px;">Dossier : <span class="photo-path">les produit/les routeurs/</span></p>
+                
+                <div class="photo-item">
+                    <div class="photo-item-info">
+                        <h3>Routeur WiFi 6 AX1800 bi-bande <span class="status-badge status-missing">✗ Photo manquante</span></h3>
+                        <p>Routeur WiFi 6 haute performance bi-bande</p>
+                        <span class="photo-path">les produit/les routeurs/ax1800.png</span>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="photo-item-info">
+                        <h3>WiFi 7 Archer BE220 – Routeur BE3600 bi-bande <span class="status-badge status-missing">✗ Photo manquante</span></h3>
+                        <p>Routeur WiFi 7 dernière génération BE3600</p>
+                        <span class="photo-path">les produit/les routeurs/archer-be220.png</span>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="photo-item-info">
+                        <h3>TL-WR844N Nouveauté 300 Mbps Multi-Mode Wi-Fi Router <span class="status-badge status-missing">✗ Photo manquante</span></h3>
+                        <p>Routeur Multi-Mode Wi-Fi N 300 Mbps</p>
+                        <span class="photo-path">les produit/les routeurs/tl-wr844n.png</span>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="photo-item-info">
+                        <h3>Point d'accès Wi-Fi N 300 Mbps – TL-WR840N <span class="status-badge status-missing">✗ Photo manquante</span></h3>
+                        <p>Point d'accès Wi-Fi N 300 Mbps</p>
+                        <span class="photo-path">les produit/les routeurs/tl-wr840n.png</span>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="photo-item-info">
+                        <h3>Point d'accès WiFi N 300 Mbps PoE – Plafonnier -EAP115 <span class="status-badge status-missing">✗ Photo manquante</span></h3>
+                        <p>Point d'accès WiFi N 300 Mbps PoE plafonnier</p>
+                        <span class="photo-path">les produit/les routeurs/eap115.png</span>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <div class="photo-item-info">
+                        <h3>AC1900 Wireless MU-MIMO Wi-Fi Router – Archer C86 <span class="status-badge status-missing">✗ Photo manquante</span></h3>
+                        <p>Routeur AC1900 Wireless MU-MIMO</p>
+                        <span class="photo-path">les produit/les routeurs/archer-c86.png</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ajouter un Nouveau Produit -->
+            <div class="photo-category" style="background: linear-gradient(135deg, var(--flow-green) 0%, var(--flag-blue) 100%); color: white;">
+                <h2 style="color: white;"><i class="fas fa-plus-circle"></i> Ajouter un Nouveau Produit</h2>
+                <p style="margin-bottom: 20px;">Pour ajouter un nouveau produit :</p>
+                <ol style="margin-left: 20px;">
+                    <li>Ajoutez la photo dans le dossier approprié avec le nom du produit</li>
+                    <li>Modifiez le fichier <span class="photo-path" style="background: rgba(255,255,255,0.2); color: white; border: none;">produits.html</span> pour ajouter la carte produit</li>
+                    <li>Ajoutez les détails dans <span class="photo-path" style="background: rgba(255,255,255,0.2); color: white; border: none;">js/product-detail.js</span></li>
+                    <li>Mettez à jour cette page avec le nouveau produit</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>À Propos</h3>
+                    <p>Votre partenaire de confiance pour toutes vos solutions technologiques. De la création de sites web à l'automatisation IA, en passant par les équipements de sécurité.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#creation-sites">Création de Sites Web</a></li>
+                        <li><a href="services.html#automatisation-ia">Automatisation IA</a></li>
+                        <li><a href="services.html#applications">Applications Mobile</a></li>
+                        <li><a href="services.html#agents-ia">Agents IA Personnalisés</a></li>
+                        <li><a href="services.html#maintenance">Maintenance Réseau</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Produits</h3>
+                    <ul>
+                        <li><a href="produits.html#serrures">Serrures Intelligentes</a></li>
+                        <li><a href="produits.html#cameras">Caméras de Surveillance</a></li>
+                        <li><a href="produits.html#routeurs">Routeurs & Switches</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Temara, Maroc</li>
+                        <li><i class="fas fa-phone"></i> +212 661 993 407</li>
+                        <li><i class="fas fa-phone"></i> +212 615 544 772</li>
+                        <li><i class="fas fa-phone"></i> +212 609 856 457</li>
+                        <li><i class="fas fa-envelope"></i> flag-flow@flagflow.ma</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FlagFlow. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

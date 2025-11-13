@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - FlagFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .about-section {
+            padding: 60px 0;
+        }
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .about-content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+        .about-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        .value-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .value-card i {
+            font-size: 48px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        .value-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        .value-card p {
+            color: var(--gray);
+        }
+        .team-section {
+            background: var(--light-color);
+            padding: 60px 0;
+        }
+        .stats-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--hover-color) 100%);
+            color: white;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        .stat-item h3 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .stat-item p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +212 661 993 407 / +212 615 544 772 / +212 609 856 457</span>
+                        <span><i class="fas fa-envelope"></i> flag-flow@flagflow.ma</span>
+                    </div>
+                    <!-- Social Media Links -->
+                    <div class="social-links">
+                        <a href="#" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/flagflow1?igsh=MWx3NXV3NDV6cGszbQ==" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/flag-flow-9475a3375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span class="flag">Flag</span><span class="flow">Flow</span></h1>
+                        </a>
+                    </div>
+                    <div class="search-bar">
+                        <form action="#" method="get">
+                            <input type="text" placeholder="Rechercher des produits..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header-actions">
+                        <a href="#" class="icon-link"><i class="fas fa-user"></i> Connexion</a>
+                        <a href="#" class="icon-link"><i class="fas fa-shopping-cart"></i> Panier <span class="cart-count">0</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services.html#creation-sites">Création de Sites Web</a></li>
+                            <li><a href="services.html#automatisation-ia">Automatisation avec IA</a></li>
+                            <li><a href="services.html#applications">Création d'Applications</a></li>
+                            <li><a href="services.html#agents-ia">Agents IA Multiplateformes</a></li>
+                            <li><a href="services.html#maintenance">Maintenance Réseau & Système</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="produits.html">Produits <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="produits.html#serrures">Serrures Intelligentes</a></li>
+                            <li><a href="produits.html#cameras">Caméras de Surveillance</a></li>
+                            <li><a href="produits.html#routeurs">Routeurs & Switches</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html" class="active">À Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--hover-color) 100%); color: white; padding: 60px 0; text-align: center;">
+        <div class="container">
+            <h1>À Propos de Nous</h1>
+            <p>Votre partenaire technologique de confiance</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2>Notre Mission</h2>
+                <p>Nous sommes une startup technologique passionnée qui offre des solutions complètes pour répondre aux besoins croissants des entreprises et des particuliers en matière de technologie. Notre mission est de rendre la technologie accessible, performante et sécurisée pour tous.</p>
+                <p>Que vous ayez besoin de créer un site web moderne, d'automatiser vos processus avec l'intelligence artificielle, de développer une application mobile, ou d'équiper votre entreprise avec des systèmes de sécurité avancés, nous sommes là pour vous accompagner à chaque étape.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>100+</h3>
+                    <p>Projets réalisés</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Clients satisfaits</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Support disponible</p>
+                </div>
+                <div class="stat-item">
+                    <h3>5+</h3>
+                    <p>Années d'expérience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title">Nos Valeurs</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovation</h3>
+                    <p>Nous restons à la pointe de la technologie pour offrir les solutions les plus innovantes et performantes.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Confiance</h3>
+                    <p>La satisfaction de nos clients est notre priorité. Nous construisons des relations durables basées sur la confiance.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Sécurité</h3>
+                    <p>La sécurité de vos données et systèmes est au cœur de toutes nos solutions.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Service Client</h3>
+                    <p>Un support client réactif et professionnel disponible pour répondre à tous vos besoins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">Ce que nous faisons</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Création de Sites Web</h3>
+                    <p>Développement de sites web modernes et responsives avec automatisation IA</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Automatisation IA</h3>
+                    <p>Solutions d'automatisation intelligentes pour optimiser vos processus</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Applications Mobile</h3>
+                    <p>Développement d'applications iOS et Android sur mesure</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Agents IA Personnalisés</h3>
+                    <p>Agents IA multiplateformes adaptés à vos besoins spécifiques</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Maintenance Réseau</h3>
+                    <p>Installation et maintenance de réseaux et systèmes informatiques</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Équipements de Sécurité</h3>
+                    <p>Serrures intelligentes, caméras et systèmes de surveillance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--hover-color) 100%); color: white; padding: 60px 0; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 36px; margin-bottom: 20px;">Prêt à travailler avec nous ?</h2>
+            <p style="font-size: 20px; margin-bottom: 30px;">Contactez-nous pour discuter de votre projet</p>
+            <a href="contact.html" class="btn btn-primary" style="background: var(--secondary-color);">Nous contacter</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>À Propos</h3>
+                    <p>Votre partenaire de confiance pour toutes vos solutions technologiques. De la création de sites web à l'automatisation IA, en passant par les équipements de sécurité.</p>
+                    <!-- Social Media Links -->
+                    <div class="social-links">
+                        <a href="#" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/flagflow1?igsh=MWx3NXV3NDV6cGszbQ==" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/flag-flow-9475a3375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#creation-sites">Création de Sites Web</a></li>
+                        <li><a href="services.html#automatisation-ia">Automatisation IA</a></li>
+                        <li><a href="services.html#applications">Applications Mobile</a></li>
+                        <li><a href="services.html#agents-ia">Agents IA Personnalisés</a></li>
+                        <li><a href="services.html#maintenance">Maintenance Réseau</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Produits</h3>
+                    <ul>
+                        <li><a href="produits.html#serrures">Serrures Intelligentes</a></li>
+                        <li><a href="produits.html#cameras">Caméras de Surveillance</a></li>
+                        <li><a href="produits.html#routeurs">Routeurs & Switches</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Temara, Maroc</li>
+                        <li><i class="fas fa-phone"></i> +212 661 993 407</li>
+                        <li><i class="fas fa-phone"></i> +212 615 544 772</li>
+                        <li><i class="fas fa-phone"></i> +212 609 856 457</li>
+                        <li><i class="fas fa-envelope"></i> flag-flow@flagflow.ma</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FlagFlow. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

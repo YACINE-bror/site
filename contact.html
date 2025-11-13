@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - FlagFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-section {
+            padding: 60px 0;
+        }
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .contact-form {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .contact-info-box {
+            background: var(--light-color);
+            padding: 40px;
+            border-radius: 8px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        .contact-item i {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-right: 20px;
+            margin-top: 5px;
+        }
+        .contact-item-content h3 {
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+        .contact-item-content p {
+            color: var(--gray);
+            margin: 0;
+        }
+        .map-container {
+            margin-top: 40px;
+            height: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +212 661 993 407 / +212 615 544 772 / +212 609 856 457</span>
+                        <span><i class="fas fa-envelope"></i> flag-flow@flagflow.ma</span>
+                    </div>
+                    <!-- Social Media Links -->
+                    <div class="social-links">
+                        <a href="#" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/flagflow1?igsh=MWx3NXV3NDV6cGszbQ==" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/flag-flow-9475a3375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span class="flag">Flag</span><span class="flow">Flow</span></h1>
+                        </a>
+                    </div>
+                    <div class="search-bar">
+                        <form action="#" method="get">
+                            <input type="text" placeholder="Rechercher des produits..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header-actions">
+                        <a href="#" class="icon-link"><i class="fas fa-user"></i> Connexion</a>
+                        <a href="#" class="icon-link"><i class="fas fa-shopping-cart"></i> Panier <span class="cart-count">0</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services.html#creation-sites">Création de Sites Web</a></li>
+                            <li><a href="services.html#automatisation-ia">Automatisation avec IA</a></li>
+                            <li><a href="services.html#applications">Création d'Applications</a></li>
+                            <li><a href="services.html#agents-ia">Agents IA Multiplateformes</a></li>
+                            <li><a href="services.html#maintenance">Maintenance Réseau & Système</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="produits.html">Produits <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="produits.html#serrures">Serrures Intelligentes</a></li>
+                            <li><a href="produits.html#cameras">Caméras de Surveillance</a></li>
+                            <li><a href="produits.html#routeurs">Routeurs & Switches</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">À Propos</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--hover-color) 100%); color: white; padding: 60px 0; text-align: center;">
+        <div class="container">
+            <h1>Contactez-nous</h1>
+            <p>Nous sommes là pour répondre à vos questions</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-form">
+                    <h2 style="margin-bottom: 30px; color: var(--dark-color);">Envoyez-nous un message</h2>
+                    <form id="contact-form" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="service">Demande de service</option>
+                                <option value="product">Question sur un produit</option>
+                                <option value="support">Support technique</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="background-color: #25d366; border-color: #25d366; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                            <i class="fab fa-whatsapp"></i> Envoyer via WhatsApp
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-info-box">
+                    <h2 style="margin-bottom: 30px; color: var(--dark-color);">Informations de contact</h2>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-item-content">
+                            <h3>Adresse</h3>
+                            <p>Temara, Maroc</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-item-content">
+                            <h3>Téléphone</h3>
+                            <p>+212 661 993 407<br>+212 615 544 772<br>+212 609 856 457</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-item-content">
+                            <h3>Email</h3>
+                            <p>flag-flow@flagflow.ma</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="contact-item-content">
+                            <h3>Heures d'ouverture</h3>
+                            <p>Lun - Ven: 9h00 - 18h00<br>Sam: 9h00 - 13h00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps?q=Temara,+Morocco&output=embed&hl=fr&zoom=13" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Localisation FlagFlow - Temara, Maroc">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>À Propos</h3>
+                    <p>Votre partenaire de confiance pour toutes vos solutions technologiques. De la création de sites web à l'automatisation IA, en passant par les équipements de sécurité.</p>
+                    <!-- Social Media Links -->
+                    <div class="social-links">
+                        <a href="#" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/flagflow1?igsh=MWx3NXV3NDV6cGszbQ==" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/flag-flow-9475a3375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#creation-sites">Création de Sites Web</a></li>
+                        <li><a href="services.html#automatisation-ia">Automatisation IA</a></li>
+                        <li><a href="services.html#applications">Applications Mobile</a></li>
+                        <li><a href="services.html#agents-ia">Agents IA Personnalisés</a></li>
+                        <li><a href="services.html#maintenance">Maintenance Réseau</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Produits</h3>
+                    <ul>
+                        <li><a href="produits.html#serrures">Serrures Intelligentes</a></li>
+                        <li><a href="produits.html#cameras">Caméras de Surveillance</a></li>
+                        <li><a href="produits.html#routeurs">Routeurs & Switches</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Temara, Maroc</li>
+                        <li><i class="fas fa-phone"></i> +212 661 993 407</li>
+                        <li><i class="fas fa-phone"></i> +212 615 544 772</li>
+                        <li><i class="fas fa-phone"></i> +212 609 856 457</li>
+                        <li><i class="fas fa-envelope"></i> flag-flow@flagflow.ma</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FlagFlow. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // WhatsApp number for contact form
+        const CONTACT_WHATSAPP_NUMBER = '212609856457'; // Format: country code + number without + or 0 (0609 856 457)
+        
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Get subject label
+            const subjectOptions = {
+                'service': 'Demande de service',
+                'product': 'Question sur un produit',
+                'support': 'Support technique',
+                'other': 'Autre'
+            };
+            const subjectLabel = subjectOptions[subject] || subject;
+            
+            // Create WhatsApp message
+            let whatsappMessage = `🔔 *Nouveau message depuis le formulaire de contact*\n\n`;
+            whatsappMessage += `👤 *Nom:* ${name}\n`;
+            whatsappMessage += `📧 *Email:* ${email}\n`;
+            if (phone) {
+                whatsappMessage += `📱 *Téléphone:* ${phone}\n`;
+            }
+            whatsappMessage += `📋 *Sujet:* ${subjectLabel}\n\n`;
+            whatsappMessage += `💬 *Message:*\n${message}\n\n`;
+            whatsappMessage += `_Message envoyé depuis le site web FlagFlow_`;
+            
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // Create WhatsApp URL
+            const whatsappUrl = `https://wa.me/${CONTACT_WHATSAPP_NUMBER}?text=${encodedMessage}`;
+            
+            // Open WhatsApp in new tab
+            window.open(whatsappUrl, '_blank');
+            
+            // Show confirmation message
+            alert('Merci pour votre message! Vous allez être redirigé vers WhatsApp pour finaliser l\'envoi.');
+            
+            // Reset form after a short delay
+            setTimeout(() => {
+                document.getElementById('contact-form').reset();
+            }, 500);
+        }
+    </script>
+</body>
+</html>
+
